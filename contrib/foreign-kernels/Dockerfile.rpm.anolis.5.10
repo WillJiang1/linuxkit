@@ -17,6 +17,13 @@ RUN cd cloud-kernel && \
     make modules -j$(nproc) && \
     make LOCALVERSION=-anolis-tdx -j$(nproc) binrpm-pkg
 
+# RUN git clone --depth 1 --branch master https://github.com/torvalds/linux.git cloud-kernel
+# ADD ./config-5.10.x-x86_64-tdx /kbuild/cloud-kernel/.config
+# RUN cd cloud-kernel && \
+#     git submodule update --init && \
+#     yes ""|make oldconfig && \
+#     make modules -j$(nproc) && \
+#     make LOCALVERSION=-upstream-tdx -j$(nproc) binrpm-pkg
 
 FROM alpine:3 AS extract
 
