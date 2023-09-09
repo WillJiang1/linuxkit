@@ -1,5 +1,5 @@
 kernel:
-  image: linuxkit/kernel:5.19-tdx
+  image: linuxkit/kernel:5.10-tdx
   cmdline: "console=tty0 console=ttyS0 vring_force_dma_api"
 init:
   - linuxkit/init:144c9cee8aed9e30a16940f2bf1d3813883aceda
