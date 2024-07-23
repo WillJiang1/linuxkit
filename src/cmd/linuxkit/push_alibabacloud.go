@@ -154,7 +154,7 @@ func createECSImage(region, akid, aksecret, name, bucketname string, imagesize i
 	if err != nil {
 		return errors.Wrapf(err, "Failed to modify ECS image")
 	}
-
+	log.Infof("%s", resp.ImageId)
 	return nil
 }
 
